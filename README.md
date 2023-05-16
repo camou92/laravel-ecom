@@ -19,3 +19,9 @@ Module Administration
 => php artisan make:controller Admin/SubCategoryController
 => php artisan make:controller Admin/ProductController
 => php artisan make:controller Admin/OrderController
+
+Les modéles
+modéle category
+=> php artisan make:model Category -m
+=>  php artisan make:model Subcategory -m
+=> php artisan make:model Product -m

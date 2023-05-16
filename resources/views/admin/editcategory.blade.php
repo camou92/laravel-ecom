@@ -22,20 +22,21 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('storecategory') }}" method="POST">
+                    <form action="{{ route('updatecategory') }}" method="POST">
                         @csrf
+                        <input type="hidden" value="{{ $category_info->id }}" name="category_id">
                         <div class="row mb-3">
                             <label class="col-sm-2 col-form-label" for="basic-default-name">Nom Categorie</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="category_name" name="category_name"
-                                    placeholder="Electronics" />
+                                    value="{{ $category_info->category_name}}" />
                             </div>
                         </div>
 
 
                         <div class="row justify-content-end">
                             <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary">Ajouter Categorie</button>
+                                <button type="submit" class="btn btn-primary">Modifier Categorie</button>
                             </div>
                         </div>
                     </form>
